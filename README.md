@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+## App Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Eat-N-Split is a React-based web application designed to help friends easily calculate and split bills after shared expenses (like dining out). The app provides a clean, intuitive interface for managing a friends list and tracking who owes what to whom.
 
-## Available Scripts
+## Key Features
 
-In the project directory, you can run:
+### 1. **Friends Management**
 
-### `npm start`
+- **Friends List**: Displays all friends with their current balance status
+- **Add Friends**: Form to add new friends with name and avatar image
+- **Balance Tracking**: Shows whether you owe money, are owed money, or are even with each friend
+- **Visual Indicators**: Color-coded balance display (red for debts owed, green for money owed to you)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. **Bill Splitting**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Bill Input**: Enter the total bill amount
+- **Expense Division**: Specify how much each person paid
+- **Payment Assignment**: Choose who is paying the bill (you or your friend)
+- **Automatic Calculation**: App calculates the split amount and updates balances accordingly
 
-### `npm test`
+### 3. **User Interface**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Two-Panel Layout**: Sidebar for friends list, main area for bill splitting
+- **Responsive Design**: Uses CSS Grid for flexible layout
+- **Interactive Elements**: Buttons for selecting friends, adding friends, and splitting bills
+- **Form Validation**: Prevents invalid inputs and ensures required fields are filled
 
-### `npm run build`
+## Technical Concepts Covered
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **React Fundamentals**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Functional Components**: All components are built as functions
+- **Hooks**: Extensive use of `useState` for state management
+- **Props**: Passing data and functions between components
+- **Event Handling**: Form submissions, button clicks, and input changes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **State Management**
 
-### `npm run eject`
+- **Local State**: Managing friends list, selected friend, form visibility
+- **State Updates**: Immutable updates using spread operator and map functions
+- **Conditional Rendering**: Showing/hiding components based on state
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **JavaScript Concepts**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Array Methods**: `map()`, `filter()` for rendering lists
+- **Object Destructuring**: Extracting properties from objects
+- **Template Literals**: Dynamic string creation for image URLs
+- **Optional Chaining**: Safe property access (`selectedFriend?.id`)
+- **Short-Circuit Evaluation**: Conditional rendering with `&&`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **CSS & Styling**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **CSS Grid**: Layout system for responsive design
+- **CSS Variables**: Custom properties for consistent theming
+- **Flexbox**: Used within grid items for alignment
+- **Transitions**: Smooth hover effects and interactions
+- **Modern CSS**: Border-radius, box-sizing, and responsive units
 
-## Learn More
+### **Form Handling**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Controlled Components**: All inputs are controlled by React state
+- **Form Submission**: Preventing default behavior and validation
+- **Input Types**: Text inputs, select dropdowns, and disabled fields
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **Data Management**
 
-### Code Splitting
+- **Unique IDs**: Using `crypto.randomUUID()` for friend identification
+- **Immutable Updates**: Creating new arrays/objects instead of mutating existing ones
+- **Balance Calculation**: Mathematical operations for bill splitting logic
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Project Structure
 
-### Analyzing the Bundle Size
+- **React 19**: Latest version with modern features
+- **Create React App**: Standard React project setup
+- **Testing Libraries**: Jest and React Testing Library included
+- **ESLint**: Code linting for consistency
+- **Build Tools**: Webpack and Babel through react-scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Learning Outcomes
 
-### Making a Progressive Web App
+This project demonstrates practical application of React concepts in building a real-world utility app, covering:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Component composition and reusability
+- State management patterns
+- User interaction handling
+- Form validation and submission
+- Responsive UI design
+- Modern JavaScript and CSS practices
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The app serves as an excellent example of how React can be used to build interactive, stateful applications with clean architecture and user-friendly interfaces.

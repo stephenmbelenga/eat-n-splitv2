@@ -47,7 +47,7 @@ export default function App() {
   function handleSplitBill(value) {
     setFriends((friends) =>
       friends.map((friend) =>
-        friend.id === selectedFriend.id
+        friend.id === selectedFriend?.id
           ? { ...friend, balance: friend.balance + value }
           : friend,
       ),
@@ -75,6 +75,7 @@ export default function App() {
         <FormSplitBill
           selectedFriend={selectedFriend}
           onSplitBill={handleSplitBill}
+          key={selectedFriend.id}
         />
       )}
     </div>
